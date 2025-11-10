@@ -149,5 +149,54 @@
       "pay": "1004",
       "__v": 0
     }
+  },
+  {
+    "timestamp": "2025-11-10T16:48:31.492Z",
+    "action": "insert",
+    "entity": "customers",
+    "data": {
+      "id": "1",
+      "name": "אסתר",
+      "status": "Patur",
+      "phone": "0548492055",
+      "dateOpenTik": "2025-11-10T16:48:13.452Z",
+      "dochSnati": "לא הוגש",
+      "note": ""
+    }
+  },
+  {
+    "timestamp": "2025-11-10T16:48:31.712Z",
+    "action": "insert",
+    "entity": "paturDetalis",
+    "data": {
+      "id": "1",
+      "zuir": "זעיר",
+      "haratKeva": "כן",
+      "pay": "100"
+    }
+  },
+  {
+    "timestamp": "2025-11-10T16:48:53.452Z",
+    "action": "insert",
+    "entity": "customers",
+    "data": {
+      "id": "326351327",
+      "name": "Naomi Zemtsovsk ",
+      "status": "Morasha",
+      "phone": "0556877460",
+      "dateOpenTik": "2025-11-10T16:48:35.011Z",
+      "dochSnati": "לא הוגש",
+      "note": ""
+    }
+  },
+  {
+    "timestamp": "2025-11-10T16:48:53.655Z",
+    "action": "insert",
+    "entity": "mursheDetalis",
+    "data": {
+      "id": "326351327",
+      "T100": "הוגש",
+      "pay": "1004"
+    }
   }
 ]

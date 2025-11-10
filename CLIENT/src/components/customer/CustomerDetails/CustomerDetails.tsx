@@ -168,7 +168,7 @@ const CustomerDetails: FC<CustomerDetailsProps> = () => {
               {formik.values.status === Status.Patur ? (
                 <>
                   <div className="form-group">
-                    <strong>זהיר:</strong>
+                    <strong>זעיר:</strong>
                     <input
                       id="zuir"
                       type="text"
@@ -304,7 +304,7 @@ const CustomerDetails: FC<CustomerDetailsProps> = () => {
               {customer.status === Status.Patur ? (
                 <>
                   <div className="form-group">
-                    <strong>זהיר:</strong>
+                    <strong>זעיר:</strong>
                     <p>{customerDetails.zuir}</p>
                   </div>
 

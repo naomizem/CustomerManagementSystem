@@ -41,7 +41,7 @@ export const useCustomer = (onSuccessCallback: () => void) => {
     dochSnati: Yup.string().required('חובה להזין דוח שנתי'),
     zuir: Yup.string().when('status', {
       is: Status.Patur,
-      then: (schema) => schema.required('חובה להזין זהיר'),
+      then: (schema) => schema.required('חובה להזין זעיר'),
     }),
     haratKeva: Yup.string().when('status', {
       is: Status.Patur,

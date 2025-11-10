@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const controller = require('../controllers-bl/mursheController')
+const controller = require('../controllers-bl/MursheController')
 
 router.get('/', async (req, res, next) => {
     try {

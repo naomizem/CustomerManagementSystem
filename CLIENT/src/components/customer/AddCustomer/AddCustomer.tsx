@@ -100,7 +100,7 @@ const AddCustomer: FC = () => {
 
         {requiredFields.includes('zuir') && (
           <div className="form-group">
-            <label htmlFor="zuir">זהיר:</label>
+            <label htmlFor="zuir">זעיר:</label>
             <input
               id="zuir"
               type="text"
