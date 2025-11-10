@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const path = require('path'); // <-- הוסף כדי לשרת את ה‑React build
+const path = require('path'); 
 const customersRoute = require('./routes/CustomersRoute');
 const mursheRoute = require('./routes/MursheRoute');
 const paturRoute = require('./routes/PaturRoute');
@@ -16,25 +16,29 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 
-// ה‑API routes
+
 app.use('/api/customers', customersRoute);
 app.use('/api/mursheDetalis', mursheRoute);
 app.use('/api/paturDetalis', paturRoute);
 
-// הגדרת תיקיית ה‑React build כסטטית
-app.use(express.static(path.join(__dirname, '../client/build')));
+const clientBuildPath = path.join(__dirname, '../client/build');
+app.use(express.static(clientBuildPath));
 
-// כל בקשה שלא תואמת API תשלח ל‑index.html של React
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+    res.sendFile(path.join(clientBuildPath, 'index.html'));
 });
 
-// טיפול בשגיאות
+
 app.use((err, req, res, next) => {
-    console.error(err);
-    res.status(500).send('An error occurred, please try again later. If the error persists, contact support.');
+    console.error('❌ ERROR DETAILS:', err);     
+    console.error('🔹 Request URL:', req.originalUrl); 
+    res.status(500).json({
+        message: err.message,
+        stack: err.stack,
+    });
 });
+
 
 app.listen(port, () => {
-    console.log(`app is listening at http://localhost:${port}`);
+    console.log(`✅ Server listening at http://localhost:${port}`);
 });
