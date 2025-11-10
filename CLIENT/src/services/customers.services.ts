@@ -1,24 +1,26 @@
 import axios from "axios";
 
+const BASE_URL = "https://customermanagementsystem-gsu9.onrender.com";
+
 class CustomersService {
     getCustomers() {
-        return axios.get("http://localhost:3000/api/customers");
+        return axios.get(`${BASE_URL}/api/customers`);
     }
 
     getCustomerById(id: string) {
-        return axios.get(`http://localhost:3000/api/customers/${id}`);
+        return axios.get(`${BASE_URL}/api/customers/${id}`);
     }
 
     insertCustomer(customerData: any) {
-        return axios.post("http://localhost:3000/api/customers", customerData);
+        return axios.post(`${BASE_URL}/api/customers`, customerData);
     }
 
     updateCustomerById(id: string, customerData: any) {
-        return axios.put(`http://localhost:3000/api/customers/${id}`, customerData);
+        return axios.put(`${BASE_URL}/api/customers/${id}`, customerData);
     }
 
     deleteCustomerById(id: string) {
-        return axios.delete(`http://localhost:3000/api/customers/${id}`);
+        return axios.delete(`${BASE_URL}/api/customers/${id}`);
     }
 }
 

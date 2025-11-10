@@ -1,24 +1,26 @@
 import axios from "axios";
 
+const BASE_URL = "https://customermanagementsystem-gsu9.onrender.com";
+
 class PaturService {
     getPaturDetails() {
-        return axios.get("http://localhost:3000/api/paturDetalis");
+        return axios.get(`${BASE_URL}/api/paturDetalis`);
     }
 
     getPaturDetailsById(id: string) {
-        return axios.get(`http://localhost:3000/api/paturDetalis/${id}`);
+        return axios.get(`${BASE_URL}/api/paturDetalis/${id}`);
     }
 
     insertPaturDetails(paturData: any) {
-        return axios.post("http://localhost:3000/api/paturDetalis", paturData);
+        return axios.post(`${BASE_URL}/api/paturDetalis`, paturData);
     }
 
     updatePaturDetailsById(id: string, paturData: any) {
-        return axios.put(`http://localhost:3000/api/paturDetalis/${id}`, paturData);
+        return axios.put(`${BASE_URL}/api/paturDetalis/${id}`, paturData);
     }
 
     deletePaturDetailsById(id: string) {
-        return axios.delete(`http://localhost:3000/api/paturDetalis/${id}`);
+        return axios.delete(`${BASE_URL}/api/paturDetalis/${id}`);
     }
 }
 

@@ -198,5 +198,30 @@
       "T100": "הוגש",
       "pay": "1004"
     }
+  },
+  {
+    "timestamp": "2025-11-10T17:45:05.031Z",
+    "action": "insert",
+    "entity": "customers",
+    "data": {
+      "id": "777777",
+      "name": "Naomi Zemtsovsk ",
+      "status": "Patur",
+      "phone": "0548492055",
+      "dateOpenTik": "2025-11-10T17:44:41.246Z",
+      "dochSnati": "לא הוגש",
+      "note": ""
+    }
+  },
+  {
+    "timestamp": "2025-11-10T17:45:05.234Z",
+    "action": "insert",
+    "entity": "paturDetalis",
+    "data": {
+      "id": "777777",
+      "zuir": "זעיר",
+      "haratKeva": "לאאא",
+      "pay": "89"
+    }
   }
 ]

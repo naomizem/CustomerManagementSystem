@@ -1,24 +1,26 @@
 import axios from "axios";
 
+const BASE_URL = "https://customermanagementsystem-gsu9.onrender.com";
+
 class MursheService {
     getMursheDetails() {
-        return axios.get("http://localhost:3000/api/mursheDetalis");
+        return axios.get(`${BASE_URL}/api/mursheDetalis`);
     }
 
     getMursheDetailsById(id: string) {
-        return axios.get(`http://localhost:3000/api/mursheDetalis/${id}`);
+        return axios.get(`${BASE_URL}/api/mursheDetalis/${id}`);
     }
 
     insertMursheDetails(mursheData: any) {
-        return axios.post("http://localhost:3000/api/mursheDetalis", mursheData);
+        return axios.post(`${BASE_URL}/api/mursheDetalis`, mursheData);
     }
 
     updateMursheDetailsById(id: string, mursheData: any) {
-        return axios.put(`http://localhost:3000/api/mursheDetalis/${id}`, mursheData);
+        return axios.put(`${BASE_URL}/api/mursheDetalis/${id}`, mursheData);
     }
 
     deleteMursheDetailsById(id: string) {
-        return axios.delete(`http://localhost:3000/api/mursheDetalis/${id}`);
+        return axios.delete(`${BASE_URL}/api/mursheDetalis/${id}`);
     }
 }
 
