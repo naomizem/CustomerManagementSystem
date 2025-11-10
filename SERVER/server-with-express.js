@@ -19,9 +19,10 @@ app.use(express.json());
 
 app.use('/api/customers', customersRoute);
 app.use('/api/mursheDetalis', mursheRoute);
-app.use('/api/paturDetalis', paturRoute);
+app.use('/api/paturDetalis', paturRoute); 
+// אם תיקיית ה‑React שלך נקראת CLIENT
 
-const clientBuildPath = path.join(__dirname, '../client/build');
+const clientBuildPath = path.join(__dirname, '../CLIENT/build');
 app.use(express.static(clientBuildPath));
 
 app.get('*', (req, res) => {
